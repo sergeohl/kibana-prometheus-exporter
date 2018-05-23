@@ -36,10 +36,11 @@ function getMetrics(protocol, host, port, rejectUnauthorized = true, callback) {
   request({
       url: url,
       method: 'GET',
-      rejectUnauthorized: rejectUnauthorized
+      rejectUnauthorized: true
     },
     function (error, res, body) {
       if (error) {
+        new Error('Error SSL----------------')
         callback(error);
         return;
       }

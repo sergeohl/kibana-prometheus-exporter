@@ -36,7 +36,7 @@ function getMetrics(protocol, host, port, rejectUnauthorized = true, callback) {
   request({
       url: url,
       method: 'GET',
-      rejectUnauthorized: true
+      rejectUnauthorized: false
     },
     function (error, res, body) {
       if (error) {
